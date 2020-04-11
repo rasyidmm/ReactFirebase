@@ -2,7 +2,9 @@
 const initialState ={
         popup : false,
         isLogin:false,
-        user: 'Manusia'
+        isLoading:false,
+        user: {},
+        notes:[]
     }
 
     const reducer = (state = initialState,action)=>{
@@ -22,6 +24,18 @@ const initialState ={
             return{
                 ...state,
             user:action.value
+            }
+        }
+        if(action.type === 'CHANGE_LOADING'){
+            return{
+                ...state,
+            isLoading:action.value
+            }
+        }
+        if(action.type === 'SET_NOTES'){
+            return{
+                ...state,
+                notes:action.value
             }
         }
         return state
