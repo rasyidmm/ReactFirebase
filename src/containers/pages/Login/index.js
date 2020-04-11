@@ -1,7 +1,7 @@
 import React,{ Component } from 'react';
 import {connect} from 'react-redux';
 import {loginUserAPI} from '../../../config/redux/action'
-import Button from '../../../components/atoms/Button.';
+import Button from '../../../components/atoms/Button';
 
 class Login extends Component{
     constructor(props){
